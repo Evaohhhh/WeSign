@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class='sq-wrap' wx:if="{{!IsGetInfo}}">
+  <view class='logo'>
+    <image src="../../images/logo.png" />
+  </view>
+  <button class='login-btn' bindtap="getUserInfo" open-type="getUserInfo" >点击授权用户信息</button>
+</view>
+
+<view class='login-wrap' wx:if="{{IsGetInfo}}">
+  <view class='logo'>
+    <image src="../../images/logo.png" />
+  </view>
+  <view class="input-wrap">
+    <view class="number"><input name="number" bindinput="numberInput" placeholder="请输入学号" /></view>
+    <view class="code"><input name="pwd" bindinput="codeInput" placeholder="请输入密码" /></view>
+  </view>
+  <button class='login-btn' bindtap="handleLogin">登录</button>
+  <button class='register-btn' bindtap="handleRegister">注册</button>
+
+</view>

@@ -1,0 +1,11 @@
+<!--pages/register/register.wxml-->
+<view class="register-wrap">
+  <view class="title">注册：请填写以下信息</view>
+  <View class="input-wrap">
+    <view class="number"><input name="number" bindinput="numberInput" placeholder="请输入学号" /></view>
+    <view class="name"><input name="name" bindinput="nameInput" placeholder="请输入姓名" /></view>
+    <view class="code"><input name="pwd" bindinput="codeInput" placeholder="请输入密码" /></view>
+  </View>
+  <button class="register-btn" bindtap="handleRegister">注册</button>
+</view>
+

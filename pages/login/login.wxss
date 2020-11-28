@@ -1,0 +1,69 @@
+.login-wrap{
+
+}
+.logo{
+  align-self: center;
+  text-align: center;
+}
+.logo image{
+  width:600rpx;
+  height:600rpx;
+}
+.login-btn{
+  text-align: center;
+  background-color: #274352;
+  border-radius: 10PX;
+  color: white;
+  padding: 15rpx 15rpx;
+  margin: 50rpx 150rpx;
+}
+
+.input-wrap{
+  text-align: center;
+}
+.number,.code{
+  height: 90rpx;
+  text-align: center;
+  padding: 5rpx 20rpx;
+  margin: 30rpx 150rpx;
+  background-color: white;
+  border-radius: 15PX;
+}
+.number input,.code input{
+  height: 90rpx;
+  font-size: 35rpx;
+  text-align: center;
+  border-radius: 10PX;
+  box-shadow: 1px 1px 1px 0px black;
+  
+}
+.register-btn{
+  border-radius: 10PX;
+  width: 190rpx;
+  background-color: #d3faf6;
+}
+/* 底色亮蓝青色  #bffff9 */
+/* 文字深蓝色    #274352 */
+
+
+/* *index.wxss*
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+} */

@@ -1,0 +1,37 @@
+/* pages/register/register.wxss */
+/* 底色亮蓝青色  #bffff9 */
+/* 文字深蓝色    #274352 */
+page{
+  background-color:#274352;
+}
+.register-wrap{
+  text-align: center;
+}
+.title{
+  text-align: center;
+  font-size: 40rpx;
+  color: aliceblue;
+  margin-top: 50rpx;
+}
+.input-wrap{
+  text-align: center;
+}
+.number,.name,.code{
+  height: 70rpx;
+  text-align: center;
+  padding: 5rpx 20rpx;
+  margin: 30rpx 150rpx;
+  background-color: white;
+  border-radius: 15PX;
+}
+.number input,.name input,.code input{
+  height: 70rpx;
+  font-size: 35rpx;
+  text-align: center;
+  
+}
+.register-btn{
+  border-radius: 15PX;
+  width: 190rpx;
+  background-color: #bffff9;
+}
