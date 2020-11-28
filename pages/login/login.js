@@ -34,7 +34,7 @@ Page({
   },
   handleRegister: function(){
     wx.navigateTo({
-      url: '../main/main',
+      url: '../register/register',
     })
   },
   handleLogin:function(){
@@ -60,7 +60,7 @@ Page({
         else{
           wx.setStorageSync('isLogin',true);
           console.log("登录成功");
-          wx.redirectTo({
+          wx.switchTab({
             url: '../main/main',
           })
         }
