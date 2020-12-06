@@ -5,7 +5,11 @@
     "pages/register/register",
     "pages/main/main",
     "pages/action/action",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/manager/manager",
+    "pages/manager/add",
+    "pages/manager/event-list",
+    "pages/manager/edit"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -22,7 +26,6 @@
         "iconPath": "/images/bar/home.png",
         "selectedIconPath": "/images/bar/homeA.png",
         "selectedColor": "#274352"
-
       },
       {
         "pagePath": "pages/action/action",

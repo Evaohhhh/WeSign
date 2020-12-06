@@ -1,0 +1,73 @@
+/* pages/manager/manager.wxss */
+.item-wrap{
+  margin: 30rpx 30rpx;
+}
+.item{
+  padding: 20rpx 20rpx;
+  margin-bottom: 30rpx;
+
+  border-radius: 0 0 5PX 5PX;
+  box-shadow: 1rpx 1rpx 24rpx -12rpx black;
+}
+.info-wrap{
+  display: flex;
+}
+.info-wrap image{
+  height: 150rpx;
+  width: 150rpx;
+  align-self: center;
+}
+.info-wrap .info{
+  margin-left: 25rpx;
+  width: 80%;
+}
+.info-wrap .info .title{
+  font-size:32rpx;
+}
+.info-wrap .info .date{
+  font-size:26rpx;
+  color:rgb(126, 126, 126);
+}
+.btn-wrap{
+  display: flex;
+  margin-top: 15rpx;
+  justify-items: end;
+  justify-content: end;
+}
+.btn-wrap .status{
+  display: flex;
+  color: white;
+  border-radius: 3PX;
+  font-size: 20rpx;
+  align-self: center;
+  background-color: #0aa511;
+  padding: 2rpx 8rpx;
+}
+.btn-wrap .delete{
+  text-align: right;
+  margin-left: auto;
+  border-radius: 3PX;
+  color: firebrick;
+  font-size: 27rpx;
+  padding: 3rpx 15rpx;
+  border: 1rpx solid firebrick;
+}
+.btn-wrap .fix{
+  text-align: right;
+  margin-left: 10rpx;
+  border-radius: 3PX;
+  padding: 2.8rpx 14rpx;
+  color: rgb(255, 255, 255);
+  background-color: steelblue;
+}
+.add-btn{
+  background-color: #274352;
+  position: fixed;
+  bottom: 0;
+  padding: 10rpx 20rpx;
+  color: white;
+  border-radius: 3PX;
+  margin-left: 40%;
+  margin-bottom: 20rpx;
+  box-shadow: 1rpx 1rpx 25rpx -4rpx #274352;
+}

@@ -3,6 +3,7 @@
 /* 文字深蓝色    #274352 */
 page{
   background-color:#274352;
+  padding-top: 200rpx;
 }
 .register-wrap{
   text-align: center;
@@ -22,7 +23,7 @@ page{
   padding: 5rpx 20rpx;
   margin: 30rpx 150rpx;
   background-color: white;
-  border-radius: 15PX;
+  border-radius: 5PX;
 }
 .number input,.name input,.code input{
   height: 70rpx;
@@ -31,7 +32,7 @@ page{
   
 }
 .register-btn{
-  border-radius: 15PX;
+  border-radius: 5PX;
   width: 190rpx;
   background-color: #bffff9;
 }

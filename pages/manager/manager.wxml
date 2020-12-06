@@ -1,0 +1,20 @@
+<view class="managet-wrap">
+  <navigator url='../manager/add' class='add-btn'>添加活动</navigator>
+  <view class='item-wrap'>
+    <view wx:for="{{eventInfo}}" wx:key="e_id"  class='item'>
+      <view class='info-wrap'>
+        <image src="http://localhost:8080/WEBPRO_18/pic/cover.png"></image>
+        <view class='info'>
+          <view class='title'>{{item.e_title}} </view>
+          <!-- <view class='desc'>{{item.e_desc}}</view> -->
+          <view class='date'>{{item.e_date}}</view>
+        </view>
+      </view>
+      <view class='btn-wrap'>
+        <!-- <view class='status'>已结束</view> -->
+        <view class='delete' data-id="{{item.e_id}}" bindtap="handleDelete">删除</view>
+        <navigator class='fix' url="../manager/edit?id={{item.e_id}}">修改</navigator>
+      </view>
+    </view>
+  </view>
+</view>

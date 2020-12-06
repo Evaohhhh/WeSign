@@ -1,0 +1,55 @@
+/* pages/manager/add.wxss */
+.add-wrap{
+  padding: 20rpx 30rpx;
+}
+.add-wrap .add-title{
+  font-size: 35rpx;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 15rpx;
+}
+.item{
+  display: flex;
+  /* background-color: wheat; */
+  padding: 20rpx 20rpx;
+  border-top: 1rpx solid #00000075;
+}
+.item-location{
+  display: flex;
+  /* background-color: wheat; */
+  padding: 20rpx 20rpx;
+  border-top: 1rpx solid #00000075;
+}
+.item .title{
+  align-self: center;
+  font-size: 30rpx;
+  font-weight: 500;
+}
+.item-location .title{
+  align-self: center;
+  font-size: 30rpx;
+  font-weight: 500;
+}
+.item-location input{
+  height: 60rpx;
+  width: 450rpx;
+}
+.picker{
+  flex: 1;
+}
+.item input{
+  height: 60rpx;
+  width: auto;
+  flex: 1;
+}
+textarea {
+  width: 500rpx;
+  height: 100rpx;
+}
+.item-location .icon{
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 10rpx;
+  text-align: end;
+  align-self: center;
+}

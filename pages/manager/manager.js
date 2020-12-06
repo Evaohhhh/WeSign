@@ -1,42 +1,64 @@
-
-// pages/my/my.js
+// pages/manager/manager.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    userInfo:wx.getStorageSync('userInfo'),
-    number:wx.getStorageSync('number'),
-    isManager: wx.getStorageSync('isManager'),
+    eventInfo:[],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var number=wx.getStorageSync('number')
+	this.init();
+  },
+  init: function(){
+	var that = this;
+	wx.request({
+	  url: 'http://localhost:8080/WEBPRO_18/xcx_get_event',
+	  method: 'GET',
+	  header: {
+	    'content-type': 'application/json' // 默认值
+	  },
+	  data: {
+	  },
+	  success: function (res) {
+	    console.log(res.data)
+	    that.setData({
+	      eventInfo:res.data,
+	    })
+	   
+	  },
+	  fail: function (res) {
+	    wx.showModal({
+	      content:'连接数据库失败'
+	    })
+	    console.log("fail to connect");
+	  }
+	})
+  },
+  handleDelete: function(e){
+    console.log(e)
+    const e_id= e.currentTarget.dataset.id
+    const u_id= wx.getStorageSync('uid')
     var that = this;
     wx.request({
-      url: 'http://localhost:8080/WEBPRO_18/xcx_manage',
+      url: 'http://localhost:8080/WEBPRO_18/xcx_del_event',
       method: 'GET',
       header: {
         'content-type': 'application/json' // 默认值
       },
       data: {
-        number:number,
+        e_id:e_id,
       },
       success: function (res) {
-        console.log(res)
-        wx.setStorageSync('uid', res.data[0].UID);
-        if(res.data[0].UIDENTITY == '2'){
-          wx.setStorageSync('isManager', 2)
-          that.data.isManager=true
-        }
-        else{
-          wx.setStorageSync('isManager', 1)
-          that.data.isManager=false
-        }
+        console.log(res.data)
+        wx.showToast({
+          title: '删除成功',
+        })
+		that.init();
       },
       fail: function (res) {
         wx.showModal({
@@ -46,18 +68,18 @@ Page({
       }
     })
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-   
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+
   },
 
   /**

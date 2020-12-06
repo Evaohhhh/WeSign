@@ -1,0 +1,41 @@
+<!--pages/manager/add.wxml-->
+
+<view class='add-wrap'>
+  <view class='add-title'>活动发布</view>
+  <view class='form-wrap'>
+    <form bindsubmit='handleAdd'>
+      <view class='item'><view class='title'>标题：</view><input type="text" name='title'/></view>
+      <view class='item'><view class='title'>工作内容：</view><input type="text" name='job'/></view>
+      <view class='item'><view class='title'>活动时间：</view><input type="text" name='date'/></view>
+      <view class='item'>
+        <view class="section__title">活动类型：</view>
+          <picker bindchange="bindPickerChange" value="{{index}}" range="{{objectArray}}" range-key="name">
+            <view class="picker">
+              {{objectArray[index].name}}
+            </view>
+          </picker>
+      </view>
+      <view class='item'><view class='title'>人数：</view><input type="text" name='person'/></view>
+      <view class='item'><view class='title'>报名截止时间：</view>
+        <!-- <input type="text" name='ddl'/> -->
+          <picker mode="multiSelector" value="{{dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}">
+            <view class="text">
+                {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArray1[3][dateTime1[3]]}}:{{dateTimeArray1[4][dateTime1[4]]}}:{{dateTimeArray1[5][dateTime1[5]]}}
+            </view>
+          </picker>
+      </view>
+      <view class='item'><view class='title'>负责人姓名：</view><input type="text" name='name'/></view>
+      <view class='item'><view class='title'>负责人联系方式：</view><input type="phone" name='phone'/></view>
+      <view class='item-location'>
+        <view class='title'>活动地点：</view>
+        <input type="text" name='place' value="{{addressInfo.address}}{{addressInfo.name}}" />
+        <view class='icon'>
+          <image class='icon' bindtap='selectedClick' src="../../images/address.png" ></image>
+        </view>
+      </view>
+      <view class='item'><view class='title'>活动详情：</view><textarea type="text" name='desc'></textarea></view>
+      <button class="submit"  form-type='submit'>发布</button>
+    </form>
+   
+  </view>
+</view>
