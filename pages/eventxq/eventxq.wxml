@@ -1,0 +1,58 @@
+<!--pages/eventxq/eventxq.wxml-->
+<!-- <text>pages/eventxq/eventxq.wxml</text> -->
+<view class="eventxq_container">
+    <view class="eventxq_topbox">
+      <view class="eventxq_titlebox">
+        <view class="eventxq_label">进行中</view>
+        <view class="eventxq_title"><text>{{info_data.e_title}}</text></view>
+      </view>
+      <view><image class="eventxq_adimg" src='/images/lunbo/1.jpg'></image></view>
+     <view class="trightbox">
+      <view class="eventxq_text"><text>序号：NO.{{info_data.e_id}}</text></view>
+      <view class="eventxq_text"><text>人数：{{info_data.e_sign}}/{{info_data.e_person}}</text></view>
+      <view class="eventxq_text"><text>负责人：{{info_data.e_name}}</text></view>
+      <view class="eventxq_text"><text>电话：{{info_data.e_phone}}</text></view>
+     </view>
+    </view>
+    
+    <view class="eventxq_xiabox">
+      <!-- 活动详情 -->
+        <view class="eventxq_list">
+          <view><image class="eventxq_listimg" src='/images/list.png'></image></view>
+          <view class="eventxq_listtext"><text>活动详情</text></view>
+        </view>
+        <view class="eventxq_listcon">
+          <view class="eventxq_listtext"><text>{{info_data.e_desc}}</text></view>
+        </view>
+        <!-- 主要活动 -->
+        <view class="eventxq_list1">
+          <view><image class="eventxq_listimg" src='/images/list.png'></image></view>
+          <view class="eventxq_listtext"><text>主要活动</text></view>
+        </view>
+        <view class="eventxq_listcon1">
+          <view class="eventxq_listtext"><text>{{info_data.e_job}}</text></view>
+        </view>
+        <!-- 时间和地址 -->
+        <view class="eventxq_list2">
+          <view><image class="eventxq_listimg" src='/images/list.png'></image></view>
+          <view class="eventxq_listtext"><text>时间和地址</text></view>
+        </view>
+        <view class="eventxq_listcon2">
+          <!-- 时间 -->
+          <view class="eventxq_list3">
+            <view><image class="eventxq_listimg1" src='/images/time.png'></image></view>
+            <view class="eventxq_time"><text>{{info_data.e_date}}</text></view>
+            <view class="eventxq_time1"><text>{{info_data.e_ddl}}截止</text></view>
+          </view>
+
+          <!-- 地址 -->
+          <view class="eventxq_list4">
+            <view><image class="eventxq_listimg1" src='/images/address.png'></image></view>
+            <view class="eventxq_address"><text>{{info_data.e_place}}</text></view>
+          </view>
+        </view>
+
+        <!-- 我要报名 -->
+        <view><button class="eventxq_btn">我要报名</button></view>
+    </view>
+</view>

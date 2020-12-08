@@ -26,6 +26,7 @@
 }
 .info-wrap .info .date{
   font-size:26rpx;
+  width: 87%;
   color:rgb(126, 126, 126);
 }
 .btn-wrap{

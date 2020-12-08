@@ -1,0 +1,229 @@
+/* pages/eventxq/eventxq.wxss */
+
+
+.eventxq_container
+{
+  width: 100vw;
+  height: 100vh;
+  background-color: #274352;
+}
+
+.eventxq_topbox
+{
+  width: 94vw;
+  height: 35vh;
+  margin-left: 3%;
+  background-color: white;
+}
+
+.eventxq_label
+{
+  width: 15%;
+  height: 65%;
+  font: 12rpx;
+  position: absolute;
+  border-radius: 10px;
+  margin-left: -40%;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #66806c;
+}
+
+.eventxq_titlebox
+{
+  width: 94vw;
+  height: 6%;
+  position: absolute;
+  margin-top: 5%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #a9b4ba;
+}
+
+.eventxq_title
+{
+  margin-left: 15%;
+}
+
+.eventxq_adimg
+{
+  width: 36%;
+  height: 17%;
+  margin-top: 20%;
+  margin-left: 5%;
+  position: absolute;
+  border-radius: 10px;
+}
+.trightbox
+{
+  width: 50%;
+  height: 17%;
+  margin-left: 43%;
+  margin-top: 20%;
+  position: absolute;
+}
+
+.eventxq_text
+{
+  margin-left: 15%;
+  margin-top: 3%;
+}
+
+/* 
+position: absolute;
+text-align: center;只能让文字水平居中
+加上  display: flex;  align-items: center;  justify-content: center;才能垂直居中 */
+
+.eventxq_xiabox
+{
+  width: 94vw;
+  height: 65vh;
+  margin-left: 3%;
+  margin-top: -3%;
+  background-color: #b1cbd8;
+  border-radius: 10px;
+  position: absolute;
+}
+
+.eventxq_listimg
+{
+  width: 20px;
+  height: 20px;
+  margin-top: 1%;
+  margin-left: 1%;
+  position: absolute;
+}
+
+.eventxq_listtext
+{
+  margin-left: 8%;
+  margin-top: 1%;
+  /* color: white; */
+}
+.eventxq_listtext
+{
+  margin-left: 8%;
+  margin-top: 1%;
+}
+.eventxq_list
+{
+  width: 80%;
+  height: 4%;
+  margin-left: 5%;
+  margin-top: 1%;
+  position: absolute;
+  /* background-color: white; */
+}
+
+.eventxq_listcon
+{
+  width: 88%;
+  height: 14%;
+  margin-left: 5%;
+  margin-top: 8%;
+  position: absolute;
+  /* background-color: white; */
+}
+
+.eventxq_list1
+{
+  width: 80%;
+  height: 4%;
+  margin-left: 5%;
+  margin-top: 28%;
+  position: absolute;
+  /* background-color: white; */
+}
+
+
+.eventxq_listcon1
+{
+  width: 88%;
+  height: 14%;
+  margin-left: 5%;
+  margin-top: 35%;
+  position: absolute;
+  /* background-color: white; */
+}
+
+.eventxq_list2
+{
+  width: 80%;
+  height: 4%;
+  margin-left: 5%;
+  margin-top: 55%;
+  position: absolute;
+  /* background-color: white; */
+}
+
+.eventxq_listcon2
+{
+  width: 88%;
+  height: 14%;
+  margin-left: 5%;
+  margin-top: 62%;
+  position: absolute;
+  /* background-color: rgb(247, 205, 177); */
+}
+
+.eventxq_list3
+{
+  width: 90%;
+  height: 60%;
+  margin-left: 8%;
+  margin-top: 3%;
+  position: absolute;
+  /* background-color: white; */
+}
+
+.eventxq_time
+{
+  margin-left: 15%;
+  margin-top: 0%;
+}
+.eventxq_time1
+{
+  margin-left: 15%;
+  margin-top: 3%;
+  color: white;
+}
+.eventxq_listimg1
+{
+  width: 30px;
+  height: 30px;
+  margin-top: 1%;
+  margin-left: -1%;
+  position: absolute;
+}
+
+.eventxq_list4
+{
+  width: 90%;
+  height: 60%;
+  margin-left: 8%;
+  margin-top: 28%;
+  position: absolute;
+  /* background-color: white; */
+}
+
+.eventxq_address
+{
+  margin-left: 15%;
+  margin-top: 3%;
+}
+
+.eventxq_btn
+{
+  background-color: #274352;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 98%;
+}

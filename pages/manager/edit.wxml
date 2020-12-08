@@ -1,6 +1,6 @@
 
 <view class='add-wrap'>
-  <view class='add-title'>活动发布</view>
+  <view class='add-title'>活动修改</view>
   <view class='form-wrap'>
     <form bindsubmit='handleAdd'>
       <view class='item'><view class='title'>标题：</view><input type="text" name='title' value="{{title}}"/></view>

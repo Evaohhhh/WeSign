@@ -1,2 +1,102 @@
-<!--pages/main/main.wxml-->
-<text>pages/main/main.wxml</text>
+<!-- pages/main/main.wxml -->
+<!-- <text>pages/main/main.wxml</text> -->
+
+ <!--搜索框 外面那个灰色的-->
+ <view class="weui-search-bar">
+ <view class="weui-search-bar__form">
+ <!--点击之后，出现input框 -->
+ <view class="weui-search-bar__box">
+ <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+ <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+ <!--输入款字数大于0，则显示清除按钮 -->
+ <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+ <icon type="clear" size="14"></icon>
+ </view>
+ </view>
+ <!--没点击之前，只是一些文字和图标 -->
+ <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+ <icon class="weui-icon-search" type="search" size="14"></icon>
+ <view class="weui-search-bar__text">搜索</view>
+ </label>
+ </view>
+ <!--动态出现的“取消”键 -->
+ <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+</view>
+
+<!-- 轮播 -->
+<view>
+  <swiper indicator-dots="true" autoplay="true" duration="500">
+    <swiper-item>
+      <image src='/images/lunbo/1.jpg' class="lunbo"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/images/lunbo/2.jpg' class="lunbo"></image>
+    </swiper-item>
+  </swiper>
+</view>
+
+<!-- 选项卡 -->
+<view class='ticket-container'>
+    <scroll-view scroll-y bindscrolltoupper="upper" style="height:70vh" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}"
+      scroll-top="{{scrollTop}}">
+      <!--Tab布局-->
+      <view class='title'>
+        <view class="{{0 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick1' data-idx='0'>
+          <text>思修活动</text>
+          <hr class="line-style"/>
+        </view>
+        
+        <view class="{{1 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick2' data-idx='1'>
+          <text>青协活动</text>
+          <hr class="line-style"/>
+        </view>
+        <view class="{{2 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick3' data-idx='2'>
+          <text>社会活动</text>
+          <hr class="line-style" />
+        </view>
+      </view>
+ 
+      <!--内容布局-->
+      <swiper class='main_swiper' bindchange='pagechange' current='{{currentIndex}}'>
+        <swiper-item class='main_swiper' >
+          <view wx:for="{{sixiu_data}}"  wx:key="{{e_id}}" class='record-item'>
+            <navigator url="/pages/eventxq/eventxq?e_id={{item.e_id}}">
+            <view class='main_name'>
+              <view class="img_box"><image class='main_img' src='http://localhost:8080/WEBPRO_18/pic/{{item.e_pic}}'></image></view>
+              <view class="main_fengmiantitle_box">
+                <view class="main_fengmiantitle">{{item.e_title}}</view>
+                <view class="main_fengmiantitle">报名截止：{{item.e_ddl}}</view>
+              </view>
+            </view>
+            </navigator>
+          </view>
+        </swiper-item>
+        <swiper-item class='main_swiper'>
+          <view wx:for="{{qingxie_data}}" wx:key="{{e_id}}" class='record-item'>
+            <navigator url="/pages/eventxq/eventxq?e_id={{item.e_id}}">
+            <view class='main_name'>
+              <view class="img_box"><image class='main_img' src='http://localhost:8080/WEBPRO_18/pic/{{item.e_pic}}'></image></view>
+              <view class="main_fengmiantitle_box">
+                <view class="main_fengmiantitle">{{item.e_title}}</view>
+                <view class="main_fengmiantitle">报名截止：{{item.e_ddl}}</view>
+              </view>
+            </view>
+          </navigator>
+          </view>
+        </swiper-item>
+        <swiper-item class='main_swiper'>
+          <view wx:for="{{shehui_data}}" wx:key="{{e_id}}" class='record-item'>
+            <navigator url="/pages/eventxq/eventxq?e_id={{item.e_id}}">
+           <view class='main_name'>
+            <view class="img_box"><image class='main_img' src='http://localhost:8080/WEBPRO_18/pic/{{item.e_pic}}'></image></view>
+            <view class="main_fengmiantitle_box">
+                <view class="main_fengmiantitle">{{item.e_title}}</view>
+                <view class="main_fengmiantitle">报名截止：{{item.e_ddl}}</view>
+              </view>
+            </view>
+          </navigator>
+          </view>
+        </swiper-item>
+      </swiper>
+    </scroll-view>
+</view>
