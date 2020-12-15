@@ -78,12 +78,15 @@
  }
 
  /* 活动轮播 */
+ swiper{
+  height: 350rpx;
+ }
  .lunbo
  {
    width: 94vw;
    margin-left: 3%;
    margin-top: 3%;
-   height: 40vw;
+   height: 329rpx;
  }
  /* 选项卡 */
  .title {

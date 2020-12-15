@@ -8,10 +8,14 @@
     <view class="number" >{{number}}</view>
     <view class="manager" wx:if="{{isManager=='2'}}">管理员</view>
     <!-- <view class='user' wx:if="{{isManager=='1'}}">用户</view> -->
-    <view class='btn-wrap'>
+    <!-- <view class='btn-wrap'>
       <view class='select-wrap'><View class='text'>我的收藏</View></view>
       <view class='time-wrap'><View class='text'>时长记录</View></view>
-    </view>
+    </view> -->
+	<view class='list-item'>
+	  <view class='text'>我的收藏</view>
+	  <image src='../../images/more.png' class='more' />
+	</view>
     <view class='list-item'>
       <view class='text'>个人信息</view>
       <image src='../../images/more.png' class='more' />

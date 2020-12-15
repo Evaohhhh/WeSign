@@ -5,9 +5,9 @@
 .item{
   padding: 20rpx 20rpx;
   margin-bottom: 30rpx;
-
+  border: 1rpx solid black;
   border-radius: 0 0 5PX 5PX;
-  box-shadow: 1rpx 1rpx 24rpx -12rpx black;
+  /* box-shadow: 1rpx 1rpx 24rpx -12rpx black; */
 }
 .info-wrap{
   display: flex;

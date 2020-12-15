@@ -4,7 +4,11 @@
   <view class='form-wrap'>
     <form bindsubmit='handleAdd'>
       <view class='item'><view class='title'>标题：</view><input type="text" name='title' value="{{title}}"/></view>
-      <view class='item'><view class='title'>工作内容：</view><input type="text" name='job' value="{{job}}" /></view>
+      <view class='item'>
+        <view class='title'>工作内容：</view>
+        <!-- <input type="text" name='job' value="{{job}}" /> -->
+        <textarea type="text" name='job' value="{{job}}" ></textarea>
+      </view>
       <view class='item'><view class='title'>活动时间：</view><input type="text" name='date' value="{{date}}"/></view>
       <view class='item'>
         <view class="section__title">活动类型：</view>

@@ -4,7 +4,8 @@
 .back{
   display: flex;
   align-items: center;
-  padding: 50rpx 0 250rpx;
+  height: 200rpx;
+  padding: 6rpx 0 250rpx;
   background-image: -webkit-gradient(linear, left top, left bottom, from( #274352), color-stop(60%, #43687b), to(white));
 }
 .card{
@@ -12,7 +13,7 @@
   background-color: white;
   border-radius: 10px;
   margin: 0 30rpx;
-  margin-top: -160rpx;
+      margin-top: -310rpx;
   /* box-shadow:  0rpx 0rpx 32rpx -7rpx black; */
 }
 .card .head{
@@ -20,7 +21,7 @@
   width: 140rpx;
   border-radius: 99px;
   position: absolute;
-  top: 69rpx;
+  top: 72rpx;
   left: 308rpx;
   box-shadow: 1rpx 1rpx 23rpx -5rpx black;
 }
@@ -86,7 +87,7 @@
 .list-item{
   display: flex;
   margin: 15rpx 30rpx;
-  padding: 15rpx 15rpx;
+  padding: 20rpx 15rpx;
   /* border-radius: 5PX; */
   border-bottom: 1rpx solid #b5b5b5cc;
 }
@@ -97,8 +98,8 @@
   align-self: center;
 }
 .list-item .more{
-  width: 40rpx;
-  height: 40rpx;
+  width: 30rpx;
+  height: 30rpx;
   text-align: end;
   align-self: center;
 }
