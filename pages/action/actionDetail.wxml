@@ -1,0 +1,49 @@
+<!--pages/action/actionDetail.wxml-->
+<view class='actionDetail-wrap'>
+  <view class='actionDetail-card-wrap'>
+    <image src="http://localhost:8080/WEBPRO_18/pic/{{listInfo.n_pic}}" />
+    <view class='title'>{{listInfo.n_title}}</view>
+    <view class='release'>{{listInfo.n_release}}</view>
+    <view class='detail'>{{listInfo.n_detail}}</view>
+    <view class='date'>{{listInfo.n_date}}</view>
+    <view class='keyword'>关键词：# {{listInfo.n_keyword}}</view>
+  </view>
+  <view class='action-comment-info-wrap'>
+    <view class='action-comment-info-wrap-title'>评论
+    </view>
+    <view class='action-comment-item' wx:for="{{commentInfo}}" key="c_id">
+      <view class='comment-user-Info'>
+        <image src="{{item.c_touxiang}}" ></image>
+        <view class='name'>{{item.c_name}}</view>
+      </view>
+      <view class='comment-content'>
+        {{item.c_detail}}
+      </view>
+      <view class='comment-date'>
+        {{item.c_date}}
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{isShowComment}}"  class='comment-input-wrap'>
+    <input type="text" placeholder="请输入评论内容" name="detail"  bindinput="commentInput" />
+    <view class="send" bindtap="handleSendComment">发送</view>
+  </view>
+  <view class='action-bottom-wrap'>
+    <button class='action-bottom-item' bindtap="handleLike" wx:if="{{isLike}}">
+      <image src="../../images/收藏.png" />
+      <view class='action-bottom-text'>收藏</view>
+    </button>
+    <button wx:else class='action-bottom-item' bindtap="handleLike">
+      <image src="../../images/收藏A.png" />
+      <view class='action-bottom-text'>取消收藏</view>
+    </button>
+    <button class='action-bottom-item' bindtap="handleComment">
+      <image src="../../images/评论.png" />
+      <view class='action-bottom-text'>评论</view>
+    </button>
+    <button class='action-bottom-item' open-type="share" >
+      <image src="../../images/分享.png" />
+      <view class='action-bottom-text'>分享</view>
+    </button>
+  </view>
+</view>

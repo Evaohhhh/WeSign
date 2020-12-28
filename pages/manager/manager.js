@@ -44,29 +44,40 @@ Page({
     const e_id= e.currentTarget.dataset.id
     const u_id= wx.getStorageSync('uid')
     var that = this;
-    wx.request({
-      url: 'http://localhost:8080/WEBPRO_18/xcx_del_event',
-      method: 'GET',
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      data: {
-        e_id:e_id,
-      },
-      success: function (res) {
-        console.log(res.data)
-        wx.showToast({
-          title: '删除成功',
+    wx.showModal({
+      //title: '',
+      content: '确定要删除这个活动吗？',
+      success (res) {
+      if (res.confirm) {
+        wx.request({
+          url: 'http://localhost:8080/WEBPRO_18/xcx_del_event',
+          method: 'GET',
+          header: {
+            'content-type': 'application/json' // 默认值
+          },
+          data: {
+            e_id:e_id,
+          },
+          success: function (res) {
+            console.log(res.data)
+            wx.showToast({
+              title: '删除成功',
+            })
+            that.init();
+          },
+          fail: function (res) {
+            wx.showModal({
+              content:'连接数据库失败'
+            })
+            console.log("fail to connect");
+          }
         })
-		that.init();
-      },
-      fail: function (res) {
-        wx.showModal({
-          content:'连接数据库失败'
-        })
-        console.log("fail to connect");
+      } else if (res.cancel) {
+        console.log('用户点击取消')
+      }
       }
     })
+   
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

@@ -1,0 +1,14 @@
+<!--pages/sign/sign.wxml-->
+<!-- <text>pages/sign/sign.wxml</text> -->
+<view class="sign_all">
+  <view class="sign_title"><text>请完善信息</text></view>
+      <view class="sign_frame">
+        <view class="sign_name"><text>姓名：</text><text class="sign_eventtext">{{user_data.u_name}}</text></view>
+        <view class="sign_num"><text>学号：</text><text class="sign_eventtext">{{user_data.u_number}}</text></view>
+        <view class="sign_event"><text>活动：</text><text class="sign_eventtext">{{event_data.e_title}}</text></view>
+        <view class="sign_time"><text>时间：</text><text class="sign_eventtext">{{event_data.e_date}}</text></view>
+        <view class="sign_pho">电话:<input type="text" class="sign_putpho" name="pho" placeholder="请输入你的电话" bindinput="phoInput"/></view>
+        <view class="sign_email">邮箱:<input type="text" class="sign_putemail" name="email" placeholder="请输入你的邮箱" bindinput="emailInput"/></view>
+        <view><button class="sign_button" bindtap="tijiao">提交</button></view>
+      </view>
+</view>

@@ -27,7 +27,7 @@
 <view>
   <swiper indicator-dots="true" autoplay="true" duration="500">
     <swiper-item>
-      <image src='/images/lunbo/1.jpg' class="lunbo"></image>
+      <image src='/images/lunbo/1.png' class="lunbo"></image>
     </swiper-item>
     <swiper-item>
       <image src='/images/lunbo/2.jpg' class="lunbo"></image>

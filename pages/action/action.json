@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "navigationBarTitleText": "资讯",
+  "navigationBarTextStyle": "black"
+
 }

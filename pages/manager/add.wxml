@@ -1,7 +1,7 @@
 <!--pages/manager/add.wxml-->
 
 <view class='add-wrap'>
-  <view class='add-title'>活动发布</view>
+  <!-- <view class='add-title'>活动发布</view> -->
   <view class='form-wrap'>
     <form bindsubmit='handleAdd'>
       <view class='item'><view class='title'>标题：</view><input type="text" name='title'/></view>
@@ -33,9 +33,10 @@
           <image class='icon' bindtap='selectedClick' src="../../images/address.png" ></image>
         </view>
       </view>
-      <view class='item'><view class='title'>活动详情：</view><textarea type="text" name='desc'></textarea></view>
+      <view class='detail-item'><view class='title'>活动详情：</view><textarea type="text" name='desc' placeholder="请添加活动详情"></textarea></view>
       <button class="submit"  form-type='submit'>发布</button>
     </form>
    
   </view>
+  
 </view>

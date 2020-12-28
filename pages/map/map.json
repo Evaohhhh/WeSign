@@ -1,6 +1,6 @@
 {
   "usingComponents": {},
   "navigationBarTitleText": "地图",
-  "navigationBarTextStyle": "white",
-  "navigationBarBackgroundColor": "#274352"
+  "navigationBarTextStyle": "black"
+
 }

@@ -26,11 +26,16 @@ Page({
     if(wx.getStorageSync('isLogin')){
       wx.switchTab({
         url: '../main/main',
+        success:function(e){
+          var page = getCurrentPages().pop();
+          if(page == undefined || page == null){
+              return;
+          }else{
+              page.onLoad();
+          }
+        }
       })
     }
-    // } else {
-    //   wx.redirectTo({url: '/pages/register/register'})
-    // }
   },
   handleRegister: function(){
     wx.navigateTo({

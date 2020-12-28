@@ -4,7 +4,7 @@
   <view class='form-wrap'>
     <form bindsubmit='handleAdd'>
       <view class='item'><view class='title'>标题：</view><input type="text" name='title' value="{{title}}"/></view>
-      <view class='item'>
+      <view class='detail-item'>
         <view class='title'>工作内容：</view>
         <!-- <input type="text" name='job' value="{{job}}" /> -->
         <textarea type="text" name='job' value="{{job}}" ></textarea>
@@ -29,7 +29,7 @@
           <image class='icon' bindtap='selectedClick' src="../../images/address.png" ></image>
         </view>
       </view>
-      <view class='item'><view class='title'>活动详情：</view><textarea type="text" name='desc' value="{{desc}}" ></textarea></view>
+      <view class='detail-item'><view class='title'>活动详情：</view><textarea type="text" name='desc' value="{{desc}}" ></textarea></view>
       <button class="submit"  form-type='submit'>修改</button>
     </form>
   </view>

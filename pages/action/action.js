@@ -5,13 +5,40 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    listInfo:[],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.getInfo();
+  },
+
+  getInfo: function(){
+      var that = this//不要漏了这句，很重要
+      
+      //获取思修活动信息
+      wx.request({
+        url:`http://localhost:8080/WEBPRO_18/xcx_get_news`, 
+        data: {
+          type: 0
+        },
+        method: 'GET',
+        header: {
+          'content-type': 'application/json' // 默认值
+        },
+        success: function (res) {
+          console.log(res)
+          that.setData({
+            listInfo:res.data,
+          });
+          console.log(res.data);//回调函数中的携带服务器响应数据
+        },
+        fail: function (res) {
+          console.log("fail to connect");
+        }
+      })
 
   },
 
@@ -26,7 +53,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.getInfo()
   },
 
   /**

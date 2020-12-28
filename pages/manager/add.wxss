@@ -1,34 +1,41 @@
 /* pages/manager/add.wxss */
 .add-wrap{
-  padding: 20rpx 30rpx;
+  padding: 20rpx 20rpx;
+  background-color: whitesmoke;
 }
 .add-wrap .add-title{
   font-size: 35rpx;
-  font-weight: 500;
   text-align: center;
   margin-bottom: 15rpx;
 }
 .item{
   display: flex;
-  /* background-color: wheat; */
   padding: 20rpx 20rpx;
-  border-top: 1rpx solid #00000075;
+  margin: 10rpx 0;
+  border-radius: 5PX;
+  background-color: #fffdfd;
+}
+.detail-item{
+  padding: 20rpx 20rpx;
+  margin: 10rpx 0;
+  border-radius: 5PX;
+  background-color: #fffdfd;
 }
 .item-location{
   display: flex;
-  /* background-color: wheat; */
   padding: 20rpx 20rpx;
-  border-top: 1rpx solid #00000075;
+  margin: 10rpx 0;
+  background-color: #fffdfd;
+  border-radius: 5PX;
 }
 .item .title{
   align-self: center;
   font-size: 30rpx;
-  font-weight: 500;
+
 }
 .item-location .title{
   align-self: center;
   font-size: 30rpx;
-  font-weight: 500;
 }
 .item-location input{
   height: 60rpx;
@@ -36,6 +43,7 @@
 }
 .picker{
   flex: 1;
+  color: #3c3c3c;
 }
 .item input{
   height: 60rpx;
@@ -43,8 +51,11 @@
   flex: 1;
 }
 textarea {
-  width: 500rpx;
-  height: 100rpx;
+  background-color: whitesmoke;
+  width: 93%;
+  margin-top: 20rpx;
+  padding: 20rpx 20rpx;
+  border-radius: 5PX;
 }
 .item-location .icon{
   width: 50rpx;
@@ -52,4 +63,8 @@ textarea {
   margin-left: 10rpx;
   text-align: end;
   align-self: center;
+}
+.submit{
+  margin-top: 20rpx;
+  background-color: wheat;
 }

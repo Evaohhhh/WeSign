@@ -12,6 +12,7 @@ App({
     }
     else{
       var number=wx.getStorageSync('number')
+      
       var that = this;
       wx.request({
         url: 'http://localhost:8080/WEBPRO_18/xcx_manage',
@@ -25,6 +26,7 @@ App({
         success: function (res) {
           console.log(res)
           wx.setStorageSync('uid', res.data[0].UID);
+          wx.setStorageSync('uname', res.data[0].UNAME);
           if(res.data[0].UIDENTITY == '2'){
             wx.setStorageSync('isManager', 2)
           }

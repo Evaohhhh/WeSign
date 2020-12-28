@@ -8,6 +8,7 @@ Page({
   data: {
     userInfo:wx.getStorageSync('userInfo'),
     number:wx.getStorageSync('number'),
+    name:wx.getStorageSync('uname'),
     isManager: wx.getStorageSync('isManager'),
   },
 
@@ -29,12 +30,13 @@ Page({
       success: function (res) {
         console.log(res)
         wx.setStorageSync('uid', res.data[0].UID);
+        wx.setStorageSync('uname', res.data[0].UNAME);
         if(res.data[0].UIDENTITY == '2'){
-          wx.setStorageSync('isManager', 2)
+          wx.setStorageSync('isManager', true)
           that.data.isManager=true
         }
         else{
-          wx.setStorageSync('isManager', 1)
+          wx.setStorageSync('isManager', false)
           that.data.isManager=false
         }
       },
@@ -58,7 +60,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var number=wx.getStorageSync('number')
+    this.setData({
+      userInfo:wx.getStorageSync('userInfo'),
+      name:wx.getStorageSync('uname'),
+      number:wx.getStorageSync('number')
+    })
     var that = this;
     wx.request({
       url: 'http://localhost:8080/WEBPRO_18/xcx_manage',
@@ -67,17 +73,24 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       data: {
-        number:number,
+        number:that.data.number,
       },
       success: function (res) {
         console.log(res)
         wx.setStorageSync('uid', res.data[0].UID);
+        wx.setStorageSync('uname', res.data[0].UNAME);
         if(res.data[0].UIDENTITY == '2'){
-          wx.setStorageSync('isManager', 2)
+          wx.setStorageSync('isManager', true)
+          that.setData({
+            isManager:true
+          })
           that.data.isManager=true
         }
         else{
-          wx.setStorageSync('isManager', 1)
+          wx.setStorageSync('isManager', false)
+          that.setData({
+            isManager:false
+          })
           that.data.isManager=false
         }
       },
@@ -89,7 +102,7 @@ Page({
       }
     })
   },
-
+  
   /**
    * 生命周期函数--监听页面隐藏
    */

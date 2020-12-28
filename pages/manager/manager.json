@@ -2,6 +2,6 @@
   "usingComponents": {
   },
   "navigationBarTitleText": "管理页面",
-  "navigationBarTextStyle": "white",
-  "navigationBarBackgroundColor": "#274352"
+  "navigationBarTextStyle": "black"
+
 }

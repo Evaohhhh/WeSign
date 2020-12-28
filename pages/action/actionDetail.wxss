@@ -1,0 +1,128 @@
+/* pages/action/actionDetail.wxss */
+.actionDetail-wrap{
+  text-align: center;
+  padding-top: 10rpx;
+}
+.actionDetail-card-wrap{
+  text-align: center;
+  margin: 25rpx 25rpx;
+  background-color: white;
+  padding: 20rpx 20rpx;
+  /* margin-bottom: 150rpx; */
+  border-radius: 10px;
+  box-shadow: 0rpx 3rpx 24rpx -13rpx;
+}
+.actionDetail-card-wrap image{
+  width: 100%;
+  height: 360rpx;
+  border-radius: 10px;
+}
+.actionDetail-card-wrap .title{
+  font-size: 34rpx;
+  line-height: 55rpx;
+}
+.actionDetail-card-wrap .release{
+  font-size: 28rpx;
+  color: #5b5b5b;
+  line-height: 55rpx;
+}
+.actionDetail-card-wrap .detail{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  text-align: justify;
+  /* color: #999999; */
+}
+.actionDetail-card-wrap .date{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #5b5b5b;
+  text-align: end;
+  /* color: #999999; */
+}
+.actionDetail-card-wrap .keyword{
+  font-size: 26rpx;
+  line-height: 40rpx;
+  color: #5b5b5b;
+  text-align: left;
+  /* color: #999999; */
+}
+.action-comment-info-wrap{
+  background-color: white;
+  padding: 20rpx 30rpx;
+  border-bottom: 1rpx solid #9999;
+  margin-bottom: 150rpx;
+}
+.action-comment-info-wrap .title{
+  text-align: left;
+}
+.action-comment-item{
+
+}
+.comment-user-Info{
+  display: flex;
+}
+.comment-user-Info image{
+  border-radius: 99PX;
+  height: 80rpx;
+  width: 80rpx;
+}
+.comment-user-Info .name{
+  align-self: center;
+  margin-left: 10rpx;
+  font-size-adjust: 28rpx;
+}
+.comment-content{
+  padding: 10rpx 20rpx;
+  text-align: left;
+}
+.comment-date{
+  font-size-adjust: 26rpx;
+  color: #5b5b5b;
+  text-align: end;
+}
+.comment-input-wrap{
+  position: fixed;
+  /* bottom: 135rpx; */
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  padding: 20rpx 30rpx;
+  background-color: white;
+  transform: translate(0px, -76px);
+}
+.comment-input-wrap .send{
+  align-self: center;
+  margin-left: 10rpx;
+  font-size-adjust: 28rpx;
+}
+.comment-input-wrap input{
+  background-color: whitesmoke;
+  height: 70rpx;
+  align-self: center;
+  width: 600rpx;
+  border-radius: 99PX;
+}
+.action-bottom-wrap{
+  z-index: 20;
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: whitesmoke;
+  padding: 15rpx 7rpx;
+}
+.action-bottom-wrap .action-bottom-item{
+  flex:1;
+  text-align: center;
+}
+.action-bottom-wrap .action-bottom-item image{
+  width: 40rpx;
+  height: 40rpx;
+  text-align: center;
+}
+.action-bottom-item .action-bottom-text{
+  text-align: center;
+  font-size: 24rpx;
+  color: #5b5b5b;
+  /* margin-top: 3rpx; */
+}

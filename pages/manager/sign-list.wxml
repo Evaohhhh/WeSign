@@ -1,0 +1,62 @@
+<!--pages/manager/sign-list.wxml-->
+<view class='sign-list-wrap'>
+  <view class='swiper-tab'>
+    <view class="tab-item {{currentTab==0 ? 'on' : ''}}" bindtap="swichNav" data-current="0">待审核</view>
+    <view class="tab-item {{currentTab==1 ? 'on' : ''}}" bindtap="swichNav" data-current="1">已通过</view>
+    <view class="tab-item {{currentTab==2 ? 'on' : ''}}" bindtap="swichNav" data-current="2">未通过</view>
+  </view>
+  <swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange">
+    <swiper-item class='swiper-item'>
+      <view class="wrap" wx:for="{{listInfo}}" wx:key="s_id">
+        <view class='item-wrap'>
+          <view class='sign-name-list'>
+            <view class='name'>{{item.u_name}}</view>
+            <view class='number'>{{item.u_number}}</view>
+          </view>
+          <view class='event-title'>{{item.e_title}}</view>
+          <view class='event-date'>{{item.e_date}}</view>
+          <view class='sign-name-list'>
+            <view class='phone'>{{item.u_phone}}</view>
+            <view class='email'>{{item.u_email}}</view>
+          </view>
+          <view class='btn-wrap'>
+            <view class='fail' bindtap="handleFail" data-id="{{item.s_id}}">不予通过</view>
+            <view class='success' bindtap="handlePass" data-id="{{item.s_id}}">通过</view>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item class='swiper-item'>
+      <view class="wrap" wx:for="{{listInfo}}" wx:key="s_id">
+        <view class='item-wrap'>
+          <view class='sign-name-list'>
+            <view class='name'>{{item.u_name}}</view>
+            <view class='number'>{{item.u_number}}</view>
+          </view>
+          <view class='event-title'>{{item.e_title}}</view>
+          <view class='event-date'>{{item.e_date}}</view>
+          <view class='sign-name-list'>
+            <view class='phone'>{{item.u_phone}}</view>
+            <view class='email'>{{item.u_email}}</view>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item class='swiper-item'>
+      <view class="wrap" wx:for="{{listInfo}}" wx:key="s_id">
+        <view class='item-wrap'>
+          <view class='sign-name-list'>
+            <view class='name'>{{item.u_name}}</view>
+            <view class='number'>{{item.u_number}}</view>
+          </view>
+          <view class='event-title'>{{item.e_title}}</view>
+          <view class='event-date'>{{item.e_date}}</view> 
+          <view class='sign-name-list'>
+            <view class='phone'>{{item.u_phone}}</view>
+            <view class='email'>{{item.u_email}}</view>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

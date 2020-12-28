@@ -38,9 +38,16 @@ Page({
         number:that.number,
         name:that.name,
         code:that.code,
+        u_touxiang:wx.getStorageSync('userInfo').avtarUrl
       },
       success: function (res) {
         console.log("注册成功")
+        wx.showToast({
+          title: '注册成功',
+        })
+        wx.redirectTo({
+          url: '../login/login',
+        })
       },
       fail: function (res) {
         console.log("fail to connect");

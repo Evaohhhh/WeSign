@@ -9,7 +9,13 @@
     "pages/manager/manager",
     "pages/manager/add",
     "pages/manager/event-list",
-    "pages/manager/edit"
+    "pages/manager/edit",
+    "pages/manager/sign-list",
+    "pages/sign/sign",
+    "pages/my/myEvent",
+    "pages/action/actionDetail",
+    "pages/action/actionPic",
+    "pages/my/collect"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -29,7 +35,7 @@
       },
       {
         "pagePath": "pages/action/action",
-        "text": "我的活动",
+        "text": "资讯",
         "color": "#ddd",
         "selectedColor": "#274352",
         "iconPath": "/images/bar/active.png",

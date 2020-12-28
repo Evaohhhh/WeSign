@@ -1,2 +1,55 @@
 <!--pages/action/action.wxml-->
-<text>pages/action/action.wxml</text>
+<view class="action-news-wrap">
+  <view class="action-btn-wrap">
+    <navigator class="btn-item" url="./actionPic">
+      <view class="action-icon">
+        <image src="../../images/风采.png" />
+      </view>
+      <view class='action-text'>
+        风采
+      </view>
+    </navigator>
+    <view class='btn-item'>
+      <view class="action-icon">
+        <image src="../../images/热点.png" />
+      </view>
+      <view class='action-text'>
+        热点
+      </view>
+    </view>
+    <view class='btn-item'>
+      <view class="action-icon">
+        <image src="../../images/人物.png" />
+      </view>
+      <view class='action-text'>
+        人物
+      </view>
+    </view>
+    <view class='btn-item'>
+      <view class="action-icon">
+        <image src="../../images/文件.png" />
+      </view>
+      <view class='action-text'>
+        文件
+      </view>
+    </view>
+  </view>
+  <navigator wx:for="{{listInfo}}" class="action-list-wrap" key="{{n_id}}" url="./actionDetail?n_id={{item.n_id}}" >
+    <view class='action-item'>
+      <image src="http://localhost:8080/WEBPRO_18/pic/{{item.n_pic}}" />
+      <view class='action-title'>{{item.n_title}}</view>
+      <view class='action-date-eye-wrap'>
+        <view class='date-wrap'>
+          <image src="../../images/时间.png" />
+          <view class='date-text'>{{item.n_date}}</view>
+        </view>
+        <view class='eye-wrap'>
+          <image src="../../images/浏览量.png" />
+          <view class='date-text'>{{item.n_eye}}</view>
+        </view>
+
+      </view>
+
+    </view>
+  </navigator>
+</view>

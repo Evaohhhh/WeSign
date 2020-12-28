@@ -13,7 +13,7 @@ Page({
    */
   onLoad: function (options) { 
     var that = this//不要漏了这句，很重要
-    console.log("tt"+options.e_id);
+    
     //获取思修活动信息
     wx.request({
       url:`http://localhost:8080/WEBPRO_18/HT_xcx_eventinfo?e_id=${options.e_id}`, 

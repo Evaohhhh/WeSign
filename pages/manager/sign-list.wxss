@@ -1,0 +1,93 @@
+.sign-list-wrap{
+
+}
+.page {
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+}
+.swiper-tab {
+  display: flex;
+  flex-direction: row;
+  padding: 10rpx 30rpx;
+  line-height: 60rpx;
+  border-bottom: 2rpx solid #777;
+}
+.tab-item {
+  width: 33.3%;
+  text-align: center;
+  font-size: 15px;
+  color: #777;
+}
+.swiper {
+  height: 1100px;
+  background: #dfdfdf;
+}
+.on {
+  background-color: #3a6275;
+  color: white;
+  border-radius: 10PX;
+}
+.swiper-item{
+  background: white;
+}
+.swiper-item .item-wrap{
+  background-color: white;
+  margin: 20rpx 20rpx;
+  padding: 20rpx 20rpx;
+  border-radius: 10Px;
+  box-shadow: 0rpx 4rpx 20rpx -15rpx;
+}
+.swiper-item .item-wrap .sign-name-list{
+  display: flex;
+}
+.swiper-item .item-wrap .sign-name-list .name{
+  flex: 1;
+  font-size: 32rpx;
+  line-height: 40rpx;
+  color: #1b0e4e;
+}
+.swiper-item .item-wrap .sign-name-list .number{
+  text-align: end;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+.swiper-item .item-wrap .sign-name-list .phone{
+  flex: 1;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+.swiper-item .item-wrap .sign-name-list .email{
+  text-align: end;
+  font-size: 26rpx;
+  line-height: 40rpx;
+}
+.swiper-item .item-wrap .event-title{
+  font-size: 30rpx;
+  line-height: 40rpx;
+}
+.swiper-item .item-wrap .event-date{
+  font-size: 23rpx;
+  line-height: 40rpx;
+ /* color: dimgrey; */
+}
+.swiper-item .item-wrap .btn-wrap{
+  display: flex;
+  margin-top: 10rpx;
+}
+.swiper-item .item-wrap .fail{
+  border: 1rpx solid #ad1010;
+  color: #ad1010;
+  border-radius: 10PX;
+  font-size: 26rpx;
+  padding: 9rpx 14rpx;
+}
+.swiper-item .item-wrap .success{
+  border: 1rpx solid #3a6275;
+  color: #3a6275;
+  border-radius: 10PX;
+  font-size: 26rpx;
+  margin-left: auto;
+  padding: 9rpx 14rpx;
+}
+
+

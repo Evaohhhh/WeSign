@@ -1,0 +1,27 @@
+<!--pages/my/collect.wxml-->
+<view class='collect-wrap'>
+  <view class='swiper-tab'>
+    <view class="tab-item {{currentTab==0 ? 'on' : ''}}" bindtap="swichNav" data-current="0">活动收藏</view>
+    <view class="tab-item {{currentTab==1 ? 'on' : ''}}" bindtap="swichNav" data-current="1">报道收藏</view>
+  </view>
+  <swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange">
+    <swiper-item class='swiper-item'>
+      <view class='news-wrap'>
+        <navigator class='news-item' wx:for="{{eventListInfo}}" wx:key="c_id" url="../eventxq/eventxq?e_id={{item.e_id}}">
+          <image src="http://localhost:8080/WEBPRO_18/pic/{{item.e_cover}}" />
+          <view class='title'>{{item.e_title}}</view>
+          <!-- <view class='date'>{{item.e_date}}</view> -->
+        </navigator>
+      </view>
+    </swiper-item>
+    <swiper-item class='swiper-item'>
+      <view class='news-wrap'>
+        <navigator class='news-item' wx:for="{{newsListinfo}}" wx:key="c_id" url="../action/actionDetail?n_id={{item.n_id}}">
+          <image src="http://localhost:8080/WEBPRO_18/pic/{{item.n_cover}}" />
+          <view class='title'>{{item.n_title}}</view>
+          <view class='date'>{{item.n_date}}</view>
+        </navigator>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

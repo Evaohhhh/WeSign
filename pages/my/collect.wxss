@@ -1,0 +1,59 @@
+/* pages/my/collect.wxss */
+
+.swiper-tab {
+  display: flex;
+  flex-direction: row;
+  padding: 10rpx 60rpx;
+  line-height: 60rpx;
+  border-bottom: 1rpx solid #bedbbb;
+}
+.tab-item {
+  text-align: center;
+  font-size: 15px;
+  flex: 1;
+  color: #777;
+}
+.swiper {
+  height: 1100px;
+  background: #dfdfdf;
+}
+.on {
+  background-color: #8db596;
+  color: white;
+  border-radius: 10PX;
+}
+.swiper-item{
+  background: white;
+}
+.swiper-item .item-wrap{
+  background-color: white;
+  margin: 20rpx 20rpx;
+  padding: 20rpx 20rpx;
+  border-radius: 10Px;
+  box-shadow: 5rpx 2rpx 31rpx -21rpx;
+}
+.news-wrap{
+  padding:20rpx 20rpx;
+}
+.news-item{
+  position: relative;
+  padding: 20rpx 20rpx;
+  background: #ffffff;
+  margin-bottom: 20rpx;
+  border-radius: 10Px;
+  box-shadow: 2rpx 9rpx 30rpx -25rpx;
+}
+.news-item image{
+  width: 100%;
+  height: 350rpx;
+  border-radius: 10PX;
+}
+.news-item .title{
+  font-size-adjust: 30rpx;
+  
+}
+.news-item .date{
+  color: rgb(134, 134, 134);
+  text-align: right;
+  font-size: 26rpx;
+}

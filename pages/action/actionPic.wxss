@@ -1,0 +1,43 @@
+/* pages/action/actionPic.wxss */
+.actionPic-wrap{
+  padding: 20rpx 20rpx;
+  background-color: #bedbbb;
+}
+.pic-item{
+  position: relative;
+  padding: 20rpx 20rpx;
+  background: #8db596;
+  margin-bottom: 20rpx;
+  border-radius: 10Px;
+}
+.pic-item image{
+  width: 100%;
+  border-radius: 10PX;
+}
+.pic-item .title{
+  color: white;
+}
+.info-list{
+  display: flex;
+
+}
+.like{
+  display: flex;
+  text-align: end;
+  margin-left: auto;
+}
+.date{
+  flex: 1;
+}
+.like image{
+  width: 30rpx;
+  height: 30rpx;
+  align-self: center;
+  
+}
+.number{
+  color: white;
+  font-size-adjust: 26rpx;
+  align-self: center;
+  margin-left: 10rpx;
+}

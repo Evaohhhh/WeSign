@@ -53,6 +53,6 @@
         </view>
 
         <!-- 我要报名 -->
-        <view><button class="eventxq_btn">我要报名</button></view>
+        <navigator url="/pages/sign/sign?e_id={{info_data.e_id}}"><view><button class="eventxq_btn">我要报名</button></view></navigator>
     </view>
 </view>

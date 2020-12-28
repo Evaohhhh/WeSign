@@ -12,7 +12,7 @@
     "minified": true,
     "newFeature": false,
     "coverView": true,
-    "nodeModules": false,
+    "nodeModules": true,
     "autoAudits": false,
     "showShadowRootInWxmlPanel": true,
     "scopeDataCheck": false,
@@ -88,6 +88,36 @@
         {
           "name": "pages/manager/edit",
           "pathName": "pages/manager/edit",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/manager/sign-list",
+          "pathName": "pages/manager/sign-list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/action/action",
+          "pathName": "pages/action/action",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/action/actionDetail",
+          "pathName": "pages/action/actionDetail",
+          "query": "n_id=1",
+          "scene": null
+        },
+        {
+          "name": "pages/action/actionPic",
+          "pathName": "pages/action/actionPic",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/collect",
+          "pathName": "pages/my/collect",
           "scene": null
         }
       ]

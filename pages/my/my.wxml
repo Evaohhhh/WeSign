@@ -1,34 +1,35 @@
 <!--pages/my/my.wxml-->
 <view class="my-wrap">
   <view class='back'>
+    <!-- <image class='background' src="../../images/back.png" mode="aspectFill"></image> -->
   </view>
   <View class='card'>
-    <image src="{{userInfo.avatarUrl}}" class='head' />
-    <view class="name" >{{userInfo.nickName}}</view>
-    <view class="number" >{{number}}</view>
-    <view class="manager" wx:if="{{isManager=='2'}}">管理员</view>
+    <image src="{{userInfo.avatarUrl}}" key="{{userInfo.avatarUrl}}" class='head' />
+    <view class="name" key="{{name}}">{{name}}</view>
+    <view class="number" key="{{number}}">{{number}}</view>
+    <view class="manager" wx:if="{{isManager}}" key="{{isManager}}">管理员</view>
     <!-- <view class='user' wx:if="{{isManager=='1'}}">用户</view> -->
     <!-- <view class='btn-wrap'>
       <view class='select-wrap'><View class='text'>我的收藏</View></view>
       <view class='time-wrap'><View class='text'>时长记录</View></view>
     </view> -->
-	<view class='list-item'>
+	<navigator class='list-item' url="./collect">
 	  <view class='text'>我的收藏</view>
 	  <image src='../../images/more.png' class='more' />
-	</view>
-    <view class='list-item'>
+	</navigator>
+    <!-- <view class='list-item'>
       <view class='text'>个人信息</view>
       <image src='../../images/more.png' class='more' />
-    </view>
+    </view> -->
     <view class='list-item'>
       <view class='text'>帮助中心</view>
       <image src='../../images/more.png' class='more' />
     </view>
-    <navigator wx:if="{{isManager=='2'}}" url="../manager/manager" class='list-item'>
+    <navigator wx:if="{{isManager}}" url="../manager/manager" class='list-item' key="{{isManager}}">
       <view class='text'>活动管理</view>
       <image src='../../images/more.png' class='more' />
     </navigator>
-    <navigator wx:if="{{isManager=='2'}}" url="../manager/manager" class='list-item'>
+    <navigator wx:if="{{isManager}}" url="../manager/sign-list" class='list-item' key="{{isManager}}">
       <view class='text'>报名审核</view>
       <image src='../../images/more.png' class='more' />
     </navigator>
